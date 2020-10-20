@@ -1,0 +1,15 @@
+.subtotal {
+    padding: 2rem;
+    color: #111;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    background-color: var(--gray);
+}
+
+.subtotal span {
+    margin-left: 10px;
+}
+
+@media screen and (max-width:600px) {}

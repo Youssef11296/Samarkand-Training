@@ -1,0 +1,44 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.home>img {
+    width: 100%;
+    margin-bottom: -100vh;
+    object-fit: contain;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: -1;
+    object-fit: cover;
+}
+
+.home__intro h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.home__introSubtitle {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.home__row {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:1200px) {
+    .home>img {
+        margin-bottom: -50vh;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .home>img {
+        margin-bottom: -20vh;
+    }
+}
