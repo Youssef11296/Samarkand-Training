@@ -3,11 +3,12 @@
     flex-direction: column;
     max-width: 1500px;
     margin: auto;
+    margin-bottom: 1rem;
 }
 
 .home>img {
     width: 100%;
-    margin-bottom: -100vh;
+    margin-bottom: -10vh;
     object-fit: contain;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     z-index: -1;
@@ -26,19 +27,15 @@
 }
 
 .home__row {
-    padding: 0 2rem;
+    padding: 0 6rem;
     display: flex;
-    justify-content: space-evenly;
-}
-
-@media screen and (max-width:1200px) {
-    .home>img {
-        margin-bottom: -50vh;
-    }
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width:900px) {
-    .home>img {
-        margin-bottom: -20vh;
+    .home__row {
+        padding: 0 2rem;
+        flex-direction: column;
     }
 }

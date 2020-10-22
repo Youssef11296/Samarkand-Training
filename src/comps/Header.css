@@ -5,7 +5,8 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: var(--black);
+    box-shadow: 0 0 4px 2px rgba(255, 255, 255, .2);
+    background-color: var(--secondary);
 }
 
 .header__logo {
@@ -28,7 +29,7 @@
 
 .header__search input {
     flex: 1;
-    padding: 4px 6px;
+    padding: .2rem 1rem;
     font-size: 1.2rem;
     border: none;
     outline: none;
@@ -80,13 +81,14 @@
 @media screen and (max-width:900px) {
     .header__nav {
         position: fixed;
-        top: 4rem;
+        top: 4.8rem;
         width: 30%;
         padding: 0 1rem;
         z-index: 1000;
         transition: .4s ease-out;
         height: calc(100vh - 4rem);
-        background-color: var(--black);
+        background-color: var(--secondary);
+        border-left: 1px solid lightgray;
         flex-direction: column;
         justify-content: space-around;
     }
@@ -94,13 +96,21 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
     }
     .header__option small {
-        font-size: 1rem;
-        font-weight: 600;
+        font-size: 1.2rem;
+        font-weight: 700;
         margin-right: 6px;
     }
     .header__menu {
         display: inline-block;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .header__search input {
+        font-size: 1rem;
+        padding: 6px 6px;
     }
 }

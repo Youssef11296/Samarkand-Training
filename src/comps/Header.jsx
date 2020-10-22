@@ -12,7 +12,11 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div className="header">
-      <Link className="header__link" to="/">
+      <Link
+        className="header__link"
+        to="/"
+        onClick={() => setShowMenu((prevState) => false)}
+      >
         <div className="header__logo">
           <img src="./images/logo.jpg" className="header__logo" />
         </div>
@@ -28,13 +32,13 @@ const Header = () => {
           onClick={() => setShowMenu((prevState) => !prevState)}
         >
           <div className="header__option">
-            <small>Welcome, Guest</small>
+            <small>Welcome</small>
             <strong>Sign In</strong>
           </div>
         </Link>
         <Link
           className="header__link"
-          to="/"
+          to="/about"
           onClick={() => setShowMenu((prevState) => !prevState)}
         >
           <div className="header__option">
@@ -45,7 +49,7 @@ const Header = () => {
 
         <Link
           className="header__link"
-          to="/"
+          to="/events"
           onClick={() => setShowMenu((prevState) => !prevState)}
         >
           <div className="header__option">

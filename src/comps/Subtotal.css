@@ -4,6 +4,7 @@
     font-size: 1.2rem;
     line-height: 2rem;
     margin: 1rem;
+    max-width: 300px;
     border-radius: 10px;
     background-color: var(--gray);
 }
@@ -12,4 +13,13 @@
     margin-left: 10px;
 }
 
-@media screen and (max-width:600px) {}
+.subtotal input {
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+    .subtotal {
+        min-width: 80%;
+        margin: 1rem auto;
+    }
+}

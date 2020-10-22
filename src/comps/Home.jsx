@@ -5,7 +5,7 @@ import Product from "./Product";
 const Home = () => {
   return (
     <div className="home">
-      <img src="./images/home2.jpg" />
+      <img src="./images/home20.jpg" />
       <div className="home__row">
         <Product
           id="1"

@@ -20,15 +20,15 @@ const Product = ({ id, title, image, rating, price }) => {
   };
 
   return (
-    <div className="product">
+    <div className="product" key={id}>
       <div className="product__info">
-        <h4 className="product__title">{title}</h4>
+        <h2 className="product__title">{title}</h2>
         <img src={image} className="product__image" />
         <div className="product__rating">
           {Array(rating)
             .fill()
-            .map((_) => (
-              <Star />
+            .map((_, index) => (
+              <Star key={index} />
             ))}
         </div>
         <div className="product__price">EGP {price}</div>
