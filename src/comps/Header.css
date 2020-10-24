@@ -75,6 +75,8 @@
 }
 
 .header__link {
+    color: #fff;
+    outline: none;
     text-decoration: none;
 }
 
@@ -92,9 +94,9 @@
         flex-direction: column;
         justify-content: space-around;
     }
-    .header__option {
-        flex-direction: row;
-        flex-wrap: wrap;
+    .header__link {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }

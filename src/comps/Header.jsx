@@ -5,11 +5,23 @@ import MenuBookIcon from "@material-ui/icons/MenuBook";
 import "./Header.css";
 import { IconButton } from "@material-ui/core";
 import { useStateValue } from "../context/StateProvider";
+import { auth } from "../firebase/Config";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
-  const [{ basket }] = useStateValue();
-
+  const [{ basket, user }] = useStateValue();
   const [showMenu, setShowMenu] = useState(false);
+
+  const history = useHistory();
+
+  const handleAuthentication = (e) => {
+    e.preventDefault();
+    if (user) {
+      auth.signOut();
+    } else {
+      history.push("/login");
+    }
+  };
   return (
     <div className="header">
       <Link
@@ -29,11 +41,13 @@ const Header = () => {
         <Link
           className="header__link"
           to="/login"
-          onClick={() => setShowMenu((prevState) => !prevState)}
+          onClick={handleAuthentication}
         >
           <div className="header__option">
-            <small>Welcome</small>
-            <strong>Sign In</strong>
+            <small>
+              Welcome, {user ? user.email.substring(0, 5) : "Guest"}
+            </small>
+            <strong>{user ? "Sign Out" : "Sign In"}</strong>
           </div>
         </Link>
         <Link
