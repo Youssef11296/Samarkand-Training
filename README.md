@@ -27,6 +27,8 @@ It'd been built Through Several Parts And Steps To Be More Standard & User Frien
 
 - Firebase
 
+- Firebase Authentication
+
 - Hosting Online (On Firebase)
 
 ## `Checking & Trying It Online`

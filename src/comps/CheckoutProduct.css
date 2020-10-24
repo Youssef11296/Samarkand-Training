@@ -10,6 +10,10 @@
     border-bottom: 1px solid lightgray;
 }
 
+.checkout__product:last-child {
+    border-bottom: none;
+}
+
 .checkout__productInfo {
     margin-left: 20px;
 }

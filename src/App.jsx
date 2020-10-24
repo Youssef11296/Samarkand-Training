@@ -9,6 +9,7 @@ import Login from "./comps/Login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useStateValue } from "./context/StateProvider";
 import { auth } from "./firebase/Config";
+import Review from "./comps/Review";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -52,6 +53,9 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/review">
+            <Review />
           </Route>
         </div>
       </Switch>

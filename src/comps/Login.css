@@ -35,12 +35,12 @@
 .login__formInput {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .login__formInput label {
     font-style: 2rem;
     font-weight: 600;
+    text-align: left;
 }
 
 .login__formInput input {
@@ -48,7 +48,7 @@
     outline: none;
     border: 1px solid #222;
     border-radius: 10px;
-    margin: 1rem;
+    margin: 1rem 0;
     font-size: 1.2rem;
     background-color: transparent;
 }
@@ -69,4 +69,8 @@
     border-radius: 10px;
     transition: .4s ease-in-out;
     background-color: var(--blue);
+}
+
+.login form button {
+    margin-left: 35%;
 }

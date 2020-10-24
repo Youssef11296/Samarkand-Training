@@ -17,9 +17,30 @@
     cursor: pointer;
 }
 
+.subtotal button {
+    color: var(--white);
+    margin: .8rem 0 .4rem;
+    padding: .6rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    max-width: 800px;
+    border-radius: 10px;
+    background-color: var(--blue);
+}
+
 @media screen and (max-width:900px) {
     .subtotal {
         min-width: 80%;
         margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .subtotal button {
+        padding: .4rem .6rem;
+        font-size: 1rem;
+        min-width: fit-content;
     }
 }
